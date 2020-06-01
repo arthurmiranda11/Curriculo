@@ -8,145 +8,126 @@
 body {
     margin: 0;
     font-family: 'Owswald', sans-serif;
-    background-color: #272727;
+    background-color: #000000f1;
 }
 
-/* Cabeçalho */
+/* Icone */
 
-.cabecalho {
-    background: #333;
-    border-bottom: solid 5px #4faddb;
-    height: 80px;
-    box-sizing: content-box;
+#check{ 
+    display: none;
 }
 
-.logo {
-    display: inline-block;
-    height: 60px;
-    padding: 10px;
+#icone{
+    cursor:  pointer;
+    padding: 15px;
+    position: fixed;
+    z-index: 1;
 }
 
-.logo img {
-    height: 100%;
+/* Barra */
+
+.barra{
+	background-color: #333;
+	height: 100%;
+	width: 200px;	  
+    position: fixed;
+    transition: all .2s linear;
+    left: -200px;
 }
 
-.menu {    
-    vertical-align: top;
-    height: 80px;
-    padding: 27px;
-    float: right;
+nav{
+	width: 100%;
+	position: absolute;
+	top: 60px;
 }
 
-.menu ul {
-    margin: 0;
-    padding: 0;
+nav a{
+	text-decoration: none;
 }
 
-.menu li {
-    display: inline-block;
+.link{
+	background-color: #494950;
+	padding: 20px;
+	font-family: 'arial';
+	font-size: 12pt;
+	transition: all .2s linear;
+	color: #f4f4f9;
+    border-bottom:  2px solid #222;
 }
 
-.cabecalho a {
-    text-decoration: none;
-    color: #eee;
-    font-size: 1.3em;
+.link:hover{
+	background-color: #050542;
 }
 
-.menu a {
-    padding: 20px;
-}
-
-.menu a:hover,
-.menu a.selected {
-    background-color: #4faddb;
-    color: #000;
-}
-
-@media(max-width: 680px) {
-    .menu {
-        display: none;
-    }
-}
-
-@media(max-width: 910px) {
-    .autenticacao {
-        display: none;
-    }
+#check:checked ~ .barra{
+    transform: translateX(200px);
 }
 
 /* Inicio */
 #inicio {
-    color: #daa520;
-    width: 100%;
-    height: 100vh;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(fundo_top.jpg);
+    color: #daa520;    
+}
+
+#name {
+    text-align: center;    
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #inicio img {
-    max-width: 50%;
+    max-width: 30%;
     border-radius: 100%;
-    position: absolute;      
-    top: -50%;
-    right: -100%;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.title {
-    position: absolute;
-    top: 50%;
-    left: 7.2%;
+#visao {
+    text-align: center;    
+    padding-top: 3%;
+    padding-bottom: 13%;
+    height: 30%;    
 }
 
-/* ABOUT */
+/* Sobre */
 
 .sobre {
     text-align: center;
     color: rgb(212, 212, 212);
     padding-left: 30%;
     padding-right: 30%;
-    padding-top: 10%;
-    padding-bottom: 13%;
+    padding-top: 15%;
+    padding-bottom: 20%;
     height: 100%;
 }
 
 #sobre h2 {    
     text-align: center;
     color: #daa520;
-    padding-bottom: 3%;
+    padding-bottom: 2%;
 }
 
 #sobre p{
     padding-top: 10%;
 }
 
-#sobre img {
-    max-width: 50%;
-    border-radius: 100%;
-    display: inline-block;
-    
-    padding: 10px;
-}
 
 
 /* Experiencia */
 
 .xp {
     text-align: center;
-    background-color: #252525;
     padding-left: 30%;
     padding-right: 30%;
     padding-top: 10%;
-    padding-bottom: 13%;
+    padding-bottom: 20%;
     height: 100%;
 }
 
 #xp h2 {
     text-align: center;
     color: #daa520;
-    padding-bottom: 3%;
+    padding-bottom: 10%;
 }
 
 #xp p {
@@ -159,11 +140,10 @@ body {
 /*Formação*/
 
 .cursos {
-    background-color: #252525;
     padding-left: 30%;
     padding-right: 30%;
     padding-top: 10.5%;
-    padding-bottom: 13%;
+    padding-bottom: 20%;
     height: 100%;
 }
 
@@ -172,7 +152,7 @@ body {
     color: #daa520;
     padding-left: 20%;
     padding-right: 20%;
-    padding-bottom: 3%;
+    padding-bottom: 15%;
 }
 
 #cursos p {
@@ -186,18 +166,17 @@ body {
 /*Contatos*/
 
 .contatos {
-    background-color: #252525;
     padding-left: 30%;
     padding-right: 30%;
     padding-top: 10.5%;
-    padding-bottom: 12%;
+    padding-bottom: 20%;
     height: 100%;
 }
 
 #contatos  h1 {
     text-align: center;
     color: #daa520;
-    padding-top: 3%;
+    padding-top: 1%;
 }
 
 #contatos  p {
@@ -212,15 +191,6 @@ body {
     padding-bottom: 1%;
 }
 
-
-/*link do github*/
-#link-git {
-text-decoration: none;
-color: rgb(36, 255, 91);
-top: 1%; 
-padding-bottom: 5%;
-padding-left: 39%;
-}
 
 /*rodape*/
 footer {
@@ -323,7 +293,7 @@ footer {
     }
     
     .one-hundred {
-        font-size: calc(4.821428571428572vw + 7.428571428571429px);
+        font-size: calc(3.821428571428572vw + 7.428571428571429px);
     }
     .one-hundre {
         font-size: calc(2.821428571428572vw + 5.428571428571429px);
@@ -347,9 +317,9 @@ footer {
     }
     
     .one-hundred {
-        font-size: 100px;
+        font-size: 80px;
     }
     .one-hundre {
-        font-size: 60px;
+        font-size: 50px;
     }
 }
