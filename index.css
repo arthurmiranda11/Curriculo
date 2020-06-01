@@ -29,10 +29,8 @@ body {
 .barra{
 	background-color: #333;
 	height: 100%;
-	width: 200px;	  
+	width: 150px;	  
     position: fixed;
-    transition: all .2s linear;
-    left: -200px;
 }
 
 nav{
@@ -59,18 +57,25 @@ nav a{
 	background-color: #050542;
 }
 
-#check:checked ~ .barra{
-    transform: translateX(200px);
-}
-
 /* Inicio */
 #inicio {
-    color: #daa520;    
+    color: #daa520;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(fundo.jpeg);    
 }
 
 #name {
     text-align: center;    
     padding-top: 5%;
+}
+
+#name2 {
+    text-align: center; 
     padding-bottom: 5%;
 }
 
@@ -110,8 +115,6 @@ nav a{
 #sobre p{
     padding-top: 10%;
 }
-
-
 
 /* Experiencia */
 
@@ -197,16 +200,10 @@ footer {
     color: #ffffff;
     text-align: center;
     background-color: #252525;
-    padding-top: 7.8%;
-    padding-bottom: 7.8%;
-}
-
-footer {
-    background-color: #747474;
+    padding-top: 2%;
+    padding-bottom: 2%;
     padding-left: 13%;
     padding-right: 13%;
-    padding-top: 10%;
-    padding-bottom: 10%;
     height: 100%;
 }
 
